@@ -3,6 +3,8 @@
 --main-secondary-color:rgba(67, 68, 85, 1); /*SLATE*/
 --accent-color: rgba(77, 90, 229, 1);/*IRIS*/
 --main-background-color: rgba(255, 255, 255, 1);/*WHITE*/
+--secondary-background-color: rgb(231, 233, 252); /*CORNFLOWER */
+--background-color-team: rgb(244, 244, 253,1); /* CLOUD */
 }
 
 body {
@@ -106,7 +108,7 @@ letter-spacing: 0.02em;
 }
 
 .team {
-background-color:rgba(244, 244, 253, 1);
+background-color:var(--background-color-team);
 }  
 
 /* =============================COMPONENTS========================= */
@@ -157,7 +159,7 @@ footer {
 }
 
 .footer-logo {
-    color:rgba(231, 233, 252, 1) ;
+    color:var(--background-color-team) ;
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 18px;
