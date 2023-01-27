@@ -23,22 +23,17 @@ a  {
 
 /* =============================HEADER========================= */
 
-.logo {
-color: var(--accent-color);
+.header-logo {
+color: var(--main-title-color);
 font-family: 'Raleway', sans-serif;
 font-weight: 800;
 font-size: 18px;
 line-height: 1.33;
-letter-spacing: 0.03em;        
+letter-spacing: 0.03em;
 }
 
-.header-logo {
-color: var(--main-title-color);
-font-family: 'Raleway';
-font-weight: 800;
-font-size: 18px;
-line-height: 1.33;
-letter-spacing: 0.03em;
+.logo {
+color: var(--accent-color);      
 }
 
 .menu-item {
@@ -57,13 +52,17 @@ color: var(--main-secondary-color);
 
 /* =============================HERO========================= */
 
+
+.hero {
+background-color: var(--main-title-color); 
+}
+   
 .hero-title {
 font-weight: 700;
 font-size: 56px;
-line-height: 1.07; 
+line-height: 1.07;
 letter-spacing: 0.02em;
 color: var(--main-background-color);
-background-color: var(--main-title-color); 
 }
 
 .visually-hidden {
@@ -181,3 +180,4 @@ footer {
     letter-spacing: 0.02em;
     color: var(--main-background-color);  
 }
+
