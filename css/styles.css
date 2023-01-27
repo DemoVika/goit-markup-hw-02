@@ -1,13 +1,15 @@
 :root {
---main-title-color:rgba(46, 47, 66, 1);
---main-secondary-color:rgba(67, 68, 85, 1);
---accent-color: rgba(77, 90, 229, 1);
---main-background-color: rgba(255, 255, 255, 1);   
+--main-title-color:rgba(46, 47, 66, 1);/*NAVY BLUE*/
+--main-secondary-color:rgba(67, 68, 85, 1); /*SLATE*/
+--accent-color: rgba(77, 90, 229, 1);/*IRIS*/
+--main-background-color: rgba(255, 255, 255, 1);/*WHITE*/
 }
 
 body {
 font-family: 'Roboto', sans-serif;
 background-color: var(--main-background-color);
+color: var(--main-secondary-color);
+font-size: 16px;
 }
 
 ul {
@@ -28,7 +30,7 @@ line-height: 1.33;
 letter-spacing: 0.03em;        
 }
 
-.logo-header {
+.header-logo {
 color: var(--main-title-color);
 font-family: 'Raleway';
 font-weight: 800;
@@ -39,7 +41,6 @@ letter-spacing: 0.03em;
 
 .menu-item {
 font-weight: 500;
-font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--main-title-color);
@@ -47,11 +48,9 @@ color: var(--main-title-color);
 
  .contacts-item {
 font-style: normal;
-font-weight: 400;
-font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: var(--main-secondary-color);
+color: var(--main-secondary-color); 
  }
 
 /* =============================HERO========================= */
@@ -59,8 +58,7 @@ color: var(--main-secondary-color);
 .hero-title {
 font-weight: 700;
 font-size: 56px;
-line-height: 60px;
-text-align: center;
+line-height: 1.07; 
 letter-spacing: 0.02em;
 color: var(--main-background-color);
 background-color: var(--main-title-color); 
@@ -80,11 +78,8 @@ color: var(--main-title-color);
 }
 
 .feature-description {
-font-weight: 400;
-font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: var(--main-secondary-color);
 }
 
 .works-title, 
@@ -92,7 +87,6 @@ color: var(--main-secondary-color);
 font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
-text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 color: var(--main-title-color);
@@ -102,18 +96,13 @@ color: var(--main-title-color);
 font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
-text-align: center;
 letter-spacing: 0.02em;
 color: var(--main-title-color);
 }
 
 .secondary-title + p {
-font-weight: 400;
-font-size: 16px;
 line-height: 1.5;
-text-align: center;
 letter-spacing: 0.02em;
-color: var(--main-secondary-color);
 }
 
 .team {
@@ -122,64 +111,52 @@ background-color:rgba(244, 244, 253, 1);
 
 /* =============================COMPONENTS========================= */
 
+.contacts-item:hover,
+.contacts-item:focus,
+.menu-item:hover,
+.menu-item:focus {
+color: var(--accent-color);
+}
+
 .button-text-main {
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
-display: flex;
-align-items: center;
 letter-spacing: 0.04em;
 color: var(--main-background-color);
 background-color:var(--accent-color) ;
-box-shadow: rgba(0, 0, 0, 0.15);
+cursor: pointer;
+}
+
+.button-text-main:is(:hover, :focus) {
+background-color: var(--main-background-color);
+color: var(--accent-color);
+/* неизвестно на какие цвета меняется hover, поэтому цвет на мой выбор */
 }
 
 .button-text-portfolio { 
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
-display: flex;
-align-items: center;
-letter-spacing: 0 .04em;
-color: var(--accent-color);
+letter-spacing: 0.04em;
+color: rgba(64, 75, 191, 1);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
 cursor: pointer;
 }
 
-.link {
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px 24px;
-width: 116px;
-height: 48px; 
-background: #F4F4FD;
-border: 1px solid #E7E9FC;
-border-radius: 4px;
-flex: none;
-order: 1;
-flex-grow: 0;
-}
-
-.link:is(:hover, :focus) { 
+.button-text-portfolio:is(:hover, :focus) { 
 background-color: rgba(64, 75, 191, 1);   
-color: #FFFFFF;
+color: var(--main-background-color);
+}
 
-}
-.contacts-item:hover,
-.contacts-item:focus {
-    color: rgba(77, 90, 229, 1);
-}
 /* =============================FOOTER========================= */
 
 footer {
   background-color: var(--main-title-color);  
 }
 
-.logo-footer {
+.footer-logo {
     color:rgba(231, 233, 252, 1) ;
     font-family: 'Raleway';
     font-weight: 800;
@@ -189,8 +166,6 @@ footer {
 }
 
 .slogan {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-background-color);  
